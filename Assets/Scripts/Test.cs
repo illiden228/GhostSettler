@@ -20,4 +20,9 @@ public class Test : MonoBehaviour
     {
         Debug.Log(a + b);
     }
+
+    public void Test_2(int a, int b)
+    {
+        Debug.Log(a * b / 2);
+    }
 }
