@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(PolygonCollider2D))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _currentHealth;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<PolygonCollider2D>().isTrigger = true;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _maxHealth = _currentHealth;
     }
